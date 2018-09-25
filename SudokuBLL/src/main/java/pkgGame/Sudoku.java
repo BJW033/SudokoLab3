@@ -1,5 +1,7 @@
 package pkgGame;
 
+import java.util.Random;
+
 import pkgHelper.LatinSquare;
 
 /**
@@ -249,4 +251,33 @@ public class Sudoku extends LatinSquare {
 	public boolean isValidValue(int iCol, int iRow, int iValue) {
 		return false;
 	}
+	public int getRegionNbr(int iCol, int iRow) {
+		int i = (iCol / iSqrtSize) + ((iRow / iSqrtSize) * iSqrtSize) ;
+		return i;
+	}
+	/*private void FillDiagonalRegions() {
+		for(int i = 0;i<iSqrtSize;i++) {
+			Random x = new Random();
+			x = nextInt(iSize);
+			getPuzzle()[i][i] = x;
+		}
+	}*/
+	public void PrintPuzzle() {
+		for(int r = 0; r<iSize;r++) {
+			for(int c = 0; c<iSize;c++) {
+				System.out.print(getPuzzle()[r][c] + " ");
+			}
+			System.out.print("\n");
+		}
+	}
+	private void SetRegion(int r) {
+		
+	}
+	private void shuffleArray(int[] ar) {
+		
+	}
+	private void ShuffleRegion(int r) {
+		
+	}
+
 }
